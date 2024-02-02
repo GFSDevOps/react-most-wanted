@@ -1,8 +1,7 @@
-# React Most Wanted
+# Linktastic App
 
-React Most Wanted is a set of starter kits, tools, features, and best practices that you can choose from and use around your React projects.
+Linktastic App is a made of starter kits, tools, features, and best practices that you can choose from and use around your React projects from React Most Wanted.
 
-[![License](https://camo.githubusercontent.com/11ead5f9f63a32c56b6558ec9cbfb25540fd265b6fbab25b51cb6925d2519ddb/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f657870726573732e737667)](https://github.com/TarikHuber/react-most-wanted/master/LICENSE) [![Code Style](https://camo.githubusercontent.com/c0486311910977832125780d8ef9ac681614939bd1b9328678007156a4648896/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64655f7374796c652d70726574746965722d6666363962342e7376673f7374796c653d666c61742d737175617265)](https://github.com/prettier/prettier)
 
 The **features** include:
 
@@ -19,7 +18,7 @@ The **features** include:
 * Real-time Forms
 * and many more...
 
-## [Documentation](https://rmw-1.gitbook.io/react-most-wanted/)
+## [Documentation](https://linktastic.ai/about/)
 
 ## Contributing
 
@@ -30,18 +29,12 @@ See [Contributing](https://github.com/TarikHuber/react-most-wanted/blob/46dcb3da
 ## Thanks
 
  
-
-![](https://camo.githubusercontent.com/963fdc34956abc2bcb1db1d9db70d4c791956b2fc8dae36836b575b7795efe42/68747470733a2f2f7777772e62726f77736572737461636b2e636f6d2f696d616765732f6d61696c2f62726f77736572737461636b2d6c6f676f2d666f6f7465722e706e67)
-
-![](.gitbook/assets/spaces_gitbook_avatar-rectangle%20%281%29.png)
-
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers.
 
-Thanks to [GitBook ](https://www.gitbook.com/)for providing us a great documentation tool.
 
 ## License
 
- This project uses the [MIT license](https://github.com/TarikHuber/react-most-wanted/blob/master/LICENSE).
+ This project is under copywrite,  software develped by Green Fields Digital.
 
 
 

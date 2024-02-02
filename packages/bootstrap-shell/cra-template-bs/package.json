@@ -1,6 +1,6 @@
 {
-  "name": "cra-template-bs",
-  "version": "0.1.1",
+  "name": "@upleveled/cra-template",
+  "version": "1.2.7",
   "keywords": [
     "react",
     "create-react-app",
@@ -11,15 +11,15 @@
   "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TarikHuber/react-most-wanted",
-    "directory": "packages/base-shell/cra-template-material-ui"
+    "url": "https://github.com/facebook/create-react-app",
+    "directory": "packages/base-shell/cra-template-base"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=8"
+    "node": ">=21.6.1"
   },
   "bugs": {
-    "url": "https://github.com/TarikHuber/react-most-wanted/issues"
+    "url": ""
   },
   "files": [
     "template",

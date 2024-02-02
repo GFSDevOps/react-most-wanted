@@ -1,3 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /src/
+Disallow: /private/
+Disallow: /logs/
+Disallow: /tests/
+Disallow: /cra-template-base/
+Disallow: /firebase-function-tools/

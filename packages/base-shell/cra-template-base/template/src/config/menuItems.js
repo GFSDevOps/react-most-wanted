@@ -1,9 +1,11 @@
 import allLocales from './locales'
 // import allThemes from './themes'
+import { useIntl } from 'react-intl';
 
 const getMenuItems = (props) => {
-  const { auth: authData, locale, updateLocale, intl } = props
-  const { setAuth, auth } = authData
+  const intl = useIntl(); // Directly inside your component
+  const { auth: authData, locale, updateLocale } = props;
+  const { setAuth, auth } = authData;
 
   const localeItems = allLocales.map((l) => {
     const result = {

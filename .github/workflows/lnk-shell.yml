@@ -1,0 +1,89 @@
+name: lnk-shell
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "packages/lnk-shell/src/**"
+      - "packages/lnk-shell/cra-template-base/template/**"
+  workflow_dispatch:
+jobs:
+  lnk-shell:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "21.6.1"
+          registry-url: 'https://registry.yarnpkg.com'
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install
+        working-directory: ./packages/lnk-shell
+      - name: Install release-it
+        run: yarn add release-it
+        working-directory: ./packages/lnk-shell
+      - name: Publish
+        run: yarn release
+        working-directory: ./packages/lnk-shell
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  lnk-shell-template:
+    if: ${{ always() }}
+    needs: [lnk-shell]
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "21.6.1"
+          registry-url: 'https://registry.yarnpkg.com'
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install
+        working-directory: ./packages/lnk-shell/cra-template-lnk
+      - name: Install release-it
+        run: yarn add release-it
+        working-directory: ./packages/lnk-shell/cra-template-lnk
+      - name: Publish
+        run: yarn release
+        working-directory: ./packages/lnk-shell/cra-template-lnk
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  Lnk-shell-link:
+    if: ${{ always() }}
+    needs: [lnk-shell-template]
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        with:
+          node-version: "21.6.1"
+      - name: install-lnk-shell
+        run: yarn create react-app link-app --template lnk
+      - name: install firebase functions dependencies
+        run: yarn install
+        working-directory: ./link-app/firebase/functions
+      - name: run build
+        run: |
+          yarn build
+        env:
+          CI: false
+        working-directory: ./link-app
+      - name: Install firebase tools
+        run: yarn add firebase-tools
+      - name: Deploy
+        run: |
+          firebase use prod
+          firebase deploy --only hosting --token $FIREBASE_TOKEN
+        working-directory: ./link-app
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

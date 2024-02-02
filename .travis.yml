@@ -1,23 +1,23 @@
 language: node_js
 node_js:
-  - 12
+  - 21.6.1
 
 cache:
   directories:
-    - demo/template/node_modules
-    - demo/template/functions/node_modules
+    - .template/node_modules
+    - .template/functions/node_modules
 
 before_install:
-  - npx create-react-app demo-app --template rmw --use-npm
-  - rm -rf demo-app/continuous_deployment
-  - mkdir -p demo-app/continuous_deployment
-  - cp -R packages/rmw-shell/cra-template-rmw/template/continuous_deployment demo-app
-  - cd demo-app
+  - yarn create-react-app demo-app --template lnk
+  - rm -rf link-app/continuous_deployment
+  - mkdir -p link-app/continuous_deployment
+  - cp -R packages/lnk-shell/cra-template-lnk/template/continuous_deployment link-app
+  - cd link-app
   - chmod +x ./continuous_deployment/before_install.sh
   - ./continuous_deployment/before_install.sh
 
 before_script:
-  - npm test --passWithNoTests
+  - yarn test --passWithNoTests
   - chmod +x ./continuous_deployment/build.sh
   - travis_wait 40 ./continuous_deployment/build.sh
 

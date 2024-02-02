@@ -3,7 +3,7 @@
 This is the base-shell template for [Create React App](https://github.com/facebook/create-react-app).
 
 Use it like this:
-`npx create-react-app base-shell-app --template cra-template-base`
+`yarn create-react-app base-shell-app --template cra-template-base`
 
 For more information, please refer to:
 

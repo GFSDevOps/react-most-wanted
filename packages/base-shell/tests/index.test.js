@@ -1,6 +1,6 @@
 import expect from 'expect'
 import React from 'react'
-import {render, unmountComponentAtNode} from 'react-dom'
+import {render, unmountComponentAtNode} from 'react-router-dom'
 
 import Component from 'src/'
 

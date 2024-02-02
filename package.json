@@ -1,0 +1,14 @@
+{
+  "name": "linktastic-v2",
+  "version": "0.2.0",
+  "description": "Base for a new SEO app",
+  "main": "index.html",
+  "repository": "git@github.com:GFSDevOps/linktastic-v2.git",
+  "author": "Ray <ray@greenfields.io>",
+  "license": "none",
+  "private": true,
+  "dependencies": {
+    "corepack": "^0.24.1"
+  },
+  "packageManager": "yarn@3.6.4"
+}

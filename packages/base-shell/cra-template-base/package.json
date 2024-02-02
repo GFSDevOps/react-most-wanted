@@ -1,6 +1,6 @@
 {
-  "name": "cra-template-base",
-  "version": "2.2.8",
+  "name": "@upleveled/cra-template",
+  "version": "1.2.7",
   "keywords": [
     "react",
     "create-react-app",
@@ -11,15 +11,15 @@
   "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TarikHuber/react-most-wanted",
+    "url": "https://github.com/facebook/create-react-app",
     "directory": "packages/base-shell/cra-template-base"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=8"
+    "node": "^=21.6.1"
   },
   "bugs": {
-    "url": "https://github.com/TarikHuber/react-most-wanted/issues"
+    "url": "https://github.com/facebook/create-react-app/issues"
   },
   "files": [
     "template",
@@ -29,6 +29,6 @@
     "release": "release-it -- patch"
   },
   "devDependencies": {
-    "release-it": "^14.12.3"
+    "release-it": "^17.0.3"
   }
 }

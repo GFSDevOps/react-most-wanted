@@ -9,18 +9,18 @@ description: Each shell has its own package and template.
 Creating a **shell** starter kit is a fairly straight forward process:
 
 ```
-npx create-react-app my-app --template base
+yarn create-react-app link-app --template base
 ```
 
 ## mui-shell
 
 ```text
-npx create-react-app my-app --template material-ui
+yarn create-react-app link-app --template material-ui
 ```
 
-## rmw-shell
+## link-shell
 
 ```text
-npx create-react-app my-app --template rmw
+yarn create-react-app link-app --template lnk
 ```
 
